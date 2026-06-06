@@ -1,0 +1,49 @@
+{
+  "name": "@tainn/denolib01",
+  "version": "0.1.0",
+  "description": "Common TypeScript and Deno utils",
+  "license": "MIT",
+  "exports": "./src/mod.ts",
+  "imports": {},
+  "tasks": {
+    "zero": "deno lint --fix src && deno fmt src && deno check src",
+    "up": "deno update --latest && rm -rf vendor && deno install"
+  },
+  "lint": {
+    "include": [
+      "src"
+    ],
+    "rules": {
+      "include": [
+        "camelcase",
+        "default-param-last",
+        "eqeqeq",
+        "explicit-function-return-type",
+        "explicit-module-boundary-types",
+        "guard-for-in",
+        "no-await-in-loop",
+        "no-boolean-literal-for-arguments",
+        "no-eval",
+        "no-inferrable-types",
+        "no-non-null-asserted-optional-chain",
+        "no-non-null-assertion",
+        "no-self-compare",
+        "no-sparse-arrays",
+        "no-sync-fn-in-async-fn",
+        "no-throw-literal",
+        "no-undef",
+        "prefer-ascii",
+        "single-var-declarator",
+        "triple-slash-reference",
+        "verbatim-module-syntax"
+      ]
+    }
+  },
+  "fmt": {
+    "useTabs": false,
+    "indentWidth": 2,
+    "lineWidth": 120,
+    "semiColons": true,
+    "singleQuote": false
+  }
+}
