@@ -21,7 +21,7 @@ export type CommandOpts = {
  * @example
  * ```ts
  * const { success, code, signal, stdout, stderr } = await command("ls ...").output();
- * console.log(new TextDecoder().decode(stdout).trim());
+ * console.log(textDecode(stdout));
  * ```
  */
 export function command(commandString: string, opts: CommandOpts = {}): Deno.Command {
@@ -33,4 +33,17 @@ export function command(commandString: string, opts: CommandOpts = {}): Deno.Com
     stdout: opts.silent ? "null" : undefined,
     stderr: opts.silent ? "null" : undefined,
   });
+}
+
+/**
+ * Decoded stdout or stderr array
+ *
+ * @example
+ * ```ts
+ * const { stdout } = await command("ls ...").output();
+ * console.log(textDecode(stdout));
+ * ```
+ */
+export function textDecode(encoded: Uint8Array): string {
+  return new TextDecoder().decode(encoded).trim();
 }
