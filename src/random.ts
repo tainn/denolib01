@@ -1,7 +1,7 @@
 import { randomInt } from "node:crypto";
 
 /**
- * Random integer between two integer parameters, inclusive
+ * Random integer between two truncated number parameters, inclusive
  *
  * @example
  * ```ts
@@ -17,5 +17,5 @@ export function randint(min: number, max: number): number | null {
     [min, max] = [max, min];
   }
 
-  return randomInt(min, max + 1);
+  return randomInt(Math.trunc(min), Math.trunc(max) + 1);
 }

@@ -21,7 +21,7 @@ export type CommandOpts = {
  * @example
  * ```ts
  * const { success, code, signal, stdout, stderr } = await command("ls ...").output();
- * console.log(textDecode(stdout));
+ * textDecode(stdout);
  * ```
  */
 export function command(commandString: string, opts: CommandOpts = {}): Deno.Command {
@@ -41,7 +41,7 @@ export function command(commandString: string, opts: CommandOpts = {}): Deno.Com
  * @example
  * ```ts
  * const { stdout } = await command("ls ...").output();
- * console.log(textDecode(stdout));
+ * textDecode(stdout);
  * ```
  */
 export function textDecode(encoded: Uint8Array): string {

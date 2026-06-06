@@ -1,5 +1,5 @@
 /**
- * Sum of elements from a single iterable parameter
+ * Sum of numbers from a single iterable parameter
  *
  * @example
  * ```ts
