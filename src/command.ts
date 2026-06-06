@@ -5,21 +5,19 @@ export type CommandOpts = {
 /**
  * Raw shell command
  *
- * Example code blocks:
- * - no wait, no save, no print
- * - wait, no save, no print
- * - wait, save, no print (most common)
- *
+ * No wait, no save, no print
  * @example
  * ```ts
  * command("ls ...", { silent: true }).spawn();
  * ```
  *
+ * Wait, no save, no print
  * @example
  * ```ts
  * const { success, code, signal } = await command("ls ...", { silent: true }).spawn().status;
  * ```
  *
+ * Wait, save, no print (most common)
  * @example
  * ```ts
  * const { success, code, signal, stdout, stderr } = await command("ls ...").output();

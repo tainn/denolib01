@@ -1,6 +1,6 @@
 {
   "name": "@tainn/denolib01",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Common TypeScript and Deno utils",
   "license": "MIT",
   "exports": "./src/mod.ts",
